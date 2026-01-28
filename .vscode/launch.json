@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: 当前文件",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "env": {
+        // 核心魔法：将当前打开文件所在的目录的上一级，强行加入 PYTHONPATH
+        "PYTHONPATH": "${fileDirname}/.."
+      }
+    }
+  ]
+}
